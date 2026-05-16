@@ -36,6 +36,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-WF7PFV41D7"
@@ -75,30 +79,31 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="hero">
+      <div class="hero-bg-grid"></div>
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <span class="badge anim" data-anim="up" data-delay="0"
+          <span class="badge gsap-fade"
             ><span class="badge-dot"></span> Open to opportunities</span
           >
-          <h1 class="anim" data-anim="up" data-delay="80">
+          <h1 class="gsap-fade">
             Hi, I'm <br /><span class="gradient-text">Phan Minh Hoàng</span>
           </h1>
-          <p class="hero-role anim" data-anim="up" data-delay="160">
+          <p class="hero-role gsap-fade">
             <span id="typed"></span><span class="caret">|</span>
           </p>
-          <p class="hero-desc anim" data-anim="up" data-delay="240">
+          <p class="hero-desc gsap-fade">
             3+ years driving organic growth across Vietnamese &amp; global
             markets through Technical SEO, content strategy, and data-driven
             optimization.
           </p>
-          <div class="hero-btns anim" data-anim="up" data-delay="320">
+          <div class="hero-btns gsap-fade">
             <a href="#projects" class="btn btn-primary"
               >View Projects <i class="fas fa-arrow-down"></i
             ></a>
             <a href="#contact" class="btn btn-outline">Get in Touch</a>
           </div>
-          <div class="hero-nums anim" data-anim="up" data-delay="400">
+          <div class="hero-nums gsap-fade">
             <div class="hn">
               <strong class="hn-val" data-count="3">0</strong
               ><span class="hn-plus">+</span
@@ -117,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="hero-visual anim" data-anim="up" data-delay="200">
+        <div class="hero-visual gsap-fade">
           <div class="hero-photo-wrap">
             <img
               src="https://raw.githubusercontent.com/phanminhhoang-seo/phanminhhoang-seo.github.io/refs/heads/main/phan-minh-hoang.png"
@@ -125,15 +130,15 @@
               class="hero-photo"
             />
           </div>
-          <div class="float-card fc1 anim" data-anim="up" data-delay="400">
+          <div class="float-card fc1">
             <i class="fas fa-chart-line"></i>
             <div><strong>+445%</strong><span>Organic Traffic</span></div>
           </div>
-          <div class="float-card fc2 anim" data-anim="up" data-delay="500">
+          <div class="float-card fc2">
             <i class="fas fa-search"></i>
             <div><strong>Top 2</strong><span>Keyword Rank</span></div>
           </div>
-          <div class="float-card fc3 anim" data-anim="up" data-delay="600">
+          <div class="float-card fc3">
             <i class="fas fa-code"></i>
             <div><strong>Schema</strong><span>Rich Snippets</span></div>
           </div>
@@ -166,12 +171,12 @@
     <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="wrap">
-        <div class="section-head anim" data-anim="up">
-          <span class="label">What I Do</span>
-          <h2>Core Expertise</h2>
+        <div class="section-head">
+          <span class="label gsap-fade">What I Do</span>
+          <h2 class="gsap-fade">Core Expertise</h2>
         </div>
         <div class="skills-grid">
-          <div class="sk anim" data-anim="up" data-delay="0">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-cogs"></i></div>
             <h3>Technical SEO</h3>
             <p>
@@ -180,7 +185,7 @@
               &amp; Robots.txt.
             </p>
           </div>
-          <div class="sk anim" data-anim="up" data-delay="80">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-search"></i></div>
             <h3>Keyword Research</h3>
             <p>
@@ -188,7 +193,7 @@
               analysis and Topical Map building.
             </p>
           </div>
-          <div class="sk anim" data-anim="up" data-delay="160">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-chart-bar"></i></div>
             <h3>Data Analysis</h3>
             <p>
@@ -196,7 +201,7 @@
               Dwell Time analysis. AI-powered optimization.
             </p>
           </div>
-          <div class="sk anim" data-anim="up" data-delay="0">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-file-alt"></i></div>
             <h3>On-page &amp; Content</h3>
             <p>
@@ -204,7 +209,7 @@
               SEO, Internal linking strategy.
             </p>
           </div>
-          <div class="sk anim" data-anim="up" data-delay="80">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-tasks"></i></div>
             <h3>Project Management</h3>
             <p>
@@ -212,7 +217,7 @@
               for 8+ projects.
             </p>
           </div>
-          <div class="sk anim" data-anim="up" data-delay="160">
+          <div class="sk gsap-skill">
             <div class="sk-icon"><i class="fas fa-desktop"></i></div>
             <h3>UX Optimization</h3>
             <p>
@@ -227,15 +232,20 @@
     <!-- EXPERIENCE -->
     <section class="section section-gray" id="experience">
       <div class="wrap">
-        <div class="section-head anim" data-anim="up">
-          <span class="label">Career Path</span>
-          <h2>Work Experience</h2>
+        <div class="section-head">
+          <span class="label gsap-fade">Career Path</span>
+          <h2 class="gsap-fade">Work Experience</h2>
         </div>
         <div class="exp-list">
-          <div class="exp anim" data-anim="up">
+          <!-- The vertical line that fills on scroll -->
+          <div class="exp-line-track">
+            <div class="exp-line-fill" id="expLineFill"></div>
+          </div>
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
-              <span class="exp-date">03/2026 — Present</span
-              ><span class="exp-now">Current</span>
+              <span class="exp-date">03/2026 — Present</span>
+              <span class="exp-now">Current</span>
             </div>
             <div class="exp-dot dot-active"><span class="dot-ring"></span></div>
             <div class="exp-right">
@@ -249,7 +259,8 @@
               </ul>
             </div>
           </div>
-          <div class="exp anim" data-anim="up">
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
               <span class="exp-date">08/2025 — 01/2026</span>
             </div>
@@ -264,7 +275,8 @@
               </ul>
             </div>
           </div>
-          <div class="exp anim" data-anim="up">
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
               <span class="exp-date">01/2025 — 06/2025</span>
             </div>
@@ -279,7 +291,8 @@
               </ul>
             </div>
           </div>
-          <div class="exp anim" data-anim="up">
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
               <span class="exp-date">05/2023 — 11/2024</span>
             </div>
@@ -294,7 +307,8 @@
               </ul>
             </div>
           </div>
-          <div class="exp anim" data-anim="up">
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
               <span class="exp-date">05/2023 — 04/2024</span>
             </div>
@@ -308,7 +322,8 @@
               </ul>
             </div>
           </div>
-          <div class="exp anim" data-anim="up">
+
+          <div class="exp gsap-exp">
             <div class="exp-left">
               <span class="exp-date">02/2022 — 04/2023</span>
             </div>
@@ -328,12 +343,12 @@
     <!-- PROJECTS -->
     <section class="section" id="projects">
       <div class="wrap">
-        <div class="section-head anim" data-anim="up">
-          <span class="label">Results That Speak</span>
-          <h2>Featured Projects</h2>
+        <div class="section-head">
+          <span class="label gsap-fade">Results That Speak</span>
+          <h2 class="gsap-fade">Featured Projects</h2>
         </div>
         <div class="proj-grid">
-          <div class="proj anim" data-anim="up" data-delay="0">
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon"><i class="fas fa-calculator"></i></div>
               <span class="proj-tag">SaaS</span>
@@ -360,7 +375,8 @@
             </div>
             <div class="proj-result">🏆 Top 9 — "Phần mềm kế toán"</div>
           </div>
-          <div class="proj anim" data-anim="up" data-delay="100">
+
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
               <span class="proj-tag">Education</span>
@@ -387,7 +403,8 @@
             </div>
             <div class="proj-result">🏆 Top 2 — "Tiếng Anh cho bé"</div>
           </div>
-          <div class="proj anim" data-anim="up" data-delay="200">
+
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon">
                 <i class="fas fa-plane-departure"></i>
@@ -418,7 +435,8 @@
               🏆 Top 2 — "Định cư Canada" &amp; "EB5"
             </div>
           </div>
-          <div class="proj anim" data-anim="up" data-delay="0">
+
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon"><i class="fas fa-futbol"></i></div>
               <span class="proj-tag">Media</span>
@@ -444,7 +462,8 @@
               </div>
             </div>
           </div>
-          <div class="proj anim" data-anim="up" data-delay="100">
+
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon"><i class="fas fa-shopping-cart"></i></div>
               <span class="proj-tag">E-commerce</span>
@@ -471,7 +490,8 @@
             </div>
             <div class="proj-result">🏆 Top 1 — "tinh dầu pod"</div>
           </div>
-          <div class="proj anim" data-anim="up" data-delay="200">
+
+          <div class="proj gsap-proj">
             <div class="proj-top">
               <div class="proj-icon"><i class="fas fa-globe"></i></div>
               <span class="proj-tag">Global</span>
@@ -492,15 +512,15 @@
     <!-- PROOF -->
     <section class="section section-gray" id="proof">
       <div class="wrap">
-        <div class="section-head anim" data-anim="up">
-          <span class="label">Real Data</span>
-          <h2>Search Console Results</h2>
-          <p class="section-sub">
+        <div class="section-head">
+          <span class="label gsap-fade">Real Data</span>
+          <h2 class="gsap-fade">Search Console Results</h2>
+          <p class="section-sub gsap-fade">
             Actual Google Search Console screenshots from my projects.
           </p>
         </div>
       </div>
-      <div class="gallery anim" data-anim="up" data-delay="200">
+      <div class="gallery gsap-fade">
         <div class="gallery-track" id="galleryTrack">
           <div class="gallery-slide">
             <img
@@ -560,29 +580,33 @@
     <!-- CONTACT -->
     <section class="section" id="contact">
       <div class="wrap">
-        <div class="section-head anim" data-anim="up">
-          <span class="label">Let's Connect</span>
-          <h2>Get in Touch</h2>
-          <p class="section-sub">
+        <div class="section-head">
+          <span class="label gsap-fade">Let's Connect</span>
+          <h2 class="gsap-fade">Get in Touch</h2>
+          <p class="section-sub gsap-fade">
             Need SEO support? Let's talk about your project.
           </p>
         </div>
-        <div class="contact-row anim" data-anim="up" data-delay="100">
-          <a href="mailto:hoangphan.180197@gmail.com" class="cc"
-            ><div class="cc-icon"><i class="fas fa-envelope"></i></div>
-            <strong>Email</strong><span>hoangphan.180197@gmail.com</span></a
-          >
-          <a href="tel:+84382657845" class="cc"
-            ><div class="cc-icon"><i class="fas fa-phone-alt"></i></div>
-            <strong>Phone</strong><span>0382 65 7845</span></a
-          >
+        <div class="contact-row gsap-fade">
+          <a href="mailto:hoangphan.180197@gmail.com" class="cc">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <strong>Email</strong>
+            <span>hoangphan.180197@gmail.com</span>
+          </a>
+          <a href="tel:+84382657845" class="cc">
+            <div class="cc-icon"><i class="fas fa-phone-alt"></i></div>
+            <strong>Phone</strong>
+            <span>0382 65 7845</span>
+          </a>
           <a
             href="https://vn.linkedin.com/in/phan-minh-hoang-lead"
             target="_blank"
             class="cc"
-            ><div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
-            <strong>LinkedIn</strong><span>Phan Minh Hoàng</span></a
           >
+            <div class="cc-icon"><i class="fab fa-linkedin-in"></i></div>
+            <strong>LinkedIn</strong>
+            <span>Phan Minh Hoàng</span>
+          </a>
         </div>
       </div>
     </section>
